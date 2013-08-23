@@ -1,0 +1,32 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="evercookie.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="swfobject-2.2.min.js"></script>
+</head>
+<body >
+<div id='temp' style='display:none'></div>
+<div id='tag' ></div>
+<script>
+		ec = new evercookie();
+		function getValue(best,all){document.getElementById('temp').innerHTML=best} // 设置临时变量
+		ec.get('name',getValue,0) //取得evercookie放置到temp标签
+		function isNotNull(){ //判断是否不空
+		str=document.getElementById('temp').innerHTML
+		if(str!=null)
+		   return true;
+		else
+		   return false;
+		}
+//document.getElementById('tag').innerHTML=isNotNull()
+
+		if(isNotNull()){//如果不空，跳转到欢迎界面
+		self.location='welcome.html';
+		}else{ //否则跳转到注册界面
+		self.location='login.html'
+		}
+
+</script>
+</body>
+</html>

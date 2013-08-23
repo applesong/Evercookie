@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<center ><h1>This is my Page</h1></center>
+<script type="text/javascript" src="evercookie.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="swfobject-2.2.min.js"></script>
+</head>
+<center>
+<body>
+
+<h2>Hello,welcome to my page. Please signe your name!</h2>
+<b>your name:</b>
+<input type="text" name="name" id="text"><br>
+<script>
+	ec = new evercookie();
+	function setValue(tag){
+	str = document.getElementById(tag).value;
+	return str;
+	}
+</script>
+<form method ='GET' action='welcome.html'>
+	<input type='submit' value='提交' onclick="ec.set('name',setValue('text')) ">
+</form>
+</body>
+</center>
+</html>
